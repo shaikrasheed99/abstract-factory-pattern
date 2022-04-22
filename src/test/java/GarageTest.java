@@ -17,4 +17,17 @@ public class GarageTest {
 
         assertEquals("hero", hero.getName());
     }
+
+    @Test
+    void shouldBeAbleToAddBajajBikeInsideGarage() {
+        Garage garage = new Garage();
+        BikeFactory bikeFactory = new BikeFactory();
+
+        garage.choose(bikeFactory);
+        garage.order("bajaj");
+        ArrayList<Vehicle> vehicles = garage.getVehicles();
+        Vehicle bajaj = vehicles.get(0);
+
+        assertEquals("bajaj", bajaj.getName());
+    }
 }

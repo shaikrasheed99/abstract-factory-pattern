@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
 public class Garage {
-    private AbstractVehicleFactory vehicleFactory;
     private final ArrayList<Vehicle> vehicles;
+    private AbstractVehicleFactory vehicleFactory;
 
     public Garage() {
         this.vehicles = new ArrayList<>();

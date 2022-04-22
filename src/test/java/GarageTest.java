@@ -30,4 +30,17 @@ public class GarageTest {
 
         assertEquals("bajaj", bajaj.getName());
     }
+
+    @Test
+    void shouldBeAbleToPlaceTataCarInsideGarage() {
+        Garage garage = new Garage();
+        CarFactory carFactory = new CarFactory();
+
+        garage.choose(carFactory);
+        garage.order("tata");
+        ArrayList<Vehicle> vehicles = garage.getVehicles();
+        Vehicle tata = vehicles.get(0);
+
+        assertEquals("tata", tata.getName());
+    }
 }

@@ -13,9 +13,9 @@ public class GarageTest {
         garage.choose(bikeFactory);
         garage.order("hero");
         ArrayList<Vehicle> vehicles = garage.getVehicles();
-        Vehicle hero = vehicles.get(0);
+        Vehicle heroBike = vehicles.get(0);
 
-        assertEquals("hero", hero.getName());
+        assertEquals("hero", heroBike.getName());
     }
 
     @Test
@@ -26,9 +26,9 @@ public class GarageTest {
         garage.choose(bikeFactory);
         garage.order("bajaj");
         ArrayList<Vehicle> vehicles = garage.getVehicles();
-        Vehicle bajaj = vehicles.get(0);
+        Vehicle bajajBike = vehicles.get(0);
 
-        assertEquals("bajaj", bajaj.getName());
+        assertEquals("bajaj", bajajBike.getName());
     }
 
     @Test
@@ -39,9 +39,9 @@ public class GarageTest {
         garage.choose(carFactory);
         garage.order("tata");
         ArrayList<Vehicle> vehicles = garage.getVehicles();
-        Vehicle tata = vehicles.get(0);
+        Vehicle tataCar = vehicles.get(0);
 
-        assertEquals("tata", tata.getName());
+        assertEquals("tata", tataCar.getName());
     }
 
     @Test

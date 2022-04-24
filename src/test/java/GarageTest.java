@@ -12,6 +12,7 @@ public class GarageTest {
     void setUpGarage() {
         garage = new Garage();
     }
+
     @Test
     void shouldBeAbleToPlaceHeroBikeInsideGarage() {
         BikeFactory bikeFactory = new BikeFactory();

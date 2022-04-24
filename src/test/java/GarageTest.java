@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -5,9 +6,14 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class GarageTest {
+    private Garage garage;
+
+    @BeforeEach
+    void setUpGarage() {
+        garage = new Garage();
+    }
     @Test
     void shouldBeAbleToPlaceHeroBikeInsideGarage() {
-        Garage garage = new Garage();
         BikeFactory bikeFactory = new BikeFactory();
 
         garage.choose(bikeFactory);
@@ -20,7 +26,6 @@ public class GarageTest {
 
     @Test
     void shouldBeAbleToPlaceBajajBikeInsideGarage() {
-        Garage garage = new Garage();
         BikeFactory bikeFactory = new BikeFactory();
 
         garage.choose(bikeFactory);
@@ -33,7 +38,6 @@ public class GarageTest {
 
     @Test
     void shouldBeAbleToPlaceTataCarInsideGarage() {
-        Garage garage = new Garage();
         CarFactory carFactory = new CarFactory();
 
         garage.choose(carFactory);
@@ -46,7 +50,6 @@ public class GarageTest {
 
     @Test
     void shouldBeAbleToPlaceSuzukiCarInsideGarage() {
-        Garage garage = new Garage();
         CarFactory carFactory = new CarFactory();
 
         garage.choose(carFactory);

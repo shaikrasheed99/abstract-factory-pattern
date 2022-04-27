@@ -8,7 +8,7 @@ public class Garage {
         this.vehicles = new ArrayList<>();
     }
 
-    public void choose(AbstractVehicleFactory vehicleFactory) {
+    public void chooseFactory(AbstractVehicleFactory vehicleFactory) {
         this.vehicleFactory = vehicleFactory;
     }
 

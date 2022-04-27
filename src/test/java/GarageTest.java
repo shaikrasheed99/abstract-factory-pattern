@@ -19,7 +19,7 @@ public class GarageTest {
         @BeforeEach
         void setUpCarFactory() {
             CarFactory carFactory = new CarFactory();
-            garage.choose(carFactory);
+            garage.chooseFactory(carFactory);
         }
 
         @Test
@@ -46,7 +46,7 @@ public class GarageTest {
         @BeforeEach
         void setUpBikeFactory() {
             BikeFactory bikeFactory = new BikeFactory();
-            garage.choose(bikeFactory);
+            garage.chooseFactory(bikeFactory);
         }
 
         @Test

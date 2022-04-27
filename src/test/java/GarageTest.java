@@ -21,11 +21,11 @@ public class GarageTest {
             CarFactory carFactory = new CarFactory();
 
             garage.choose(carFactory);
-            garage.order("tata");
+            garage.order(CAR_TYPE.TATA);
             ArrayList<Vehicle> vehicles = garage.getVehicles();
             Vehicle tataCar = vehicles.get(0);
 
-            assertEquals("tata", tataCar.getName());
+            assertEquals(CAR_TYPE.TATA, tataCar.getName());
         }
 
         @Test
@@ -33,11 +33,11 @@ public class GarageTest {
             CarFactory carFactory = new CarFactory();
 
             garage.choose(carFactory);
-            garage.order("suzuki");
+            garage.order(CAR_TYPE.SUZUKI);
             ArrayList<Vehicle> vehicles = garage.getVehicles();
             Vehicle suzukiCar = vehicles.get(0);
 
-            assertEquals("suzuki", suzukiCar.getName());
+            assertEquals(CAR_TYPE.SUZUKI, suzukiCar.getName());
         }
     }
 
@@ -48,11 +48,11 @@ public class GarageTest {
             BikeFactory bikeFactory = new BikeFactory();
 
             garage.choose(bikeFactory);
-            garage.order("hero");
+            garage.order(BIKE_TYPE.HERO);
             ArrayList<Vehicle> vehicles = garage.getVehicles();
             Vehicle heroBike = vehicles.get(0);
 
-            assertEquals("hero", heroBike.getName());
+            assertEquals(BIKE_TYPE.HERO, heroBike.getName());
         }
 
         @Test
@@ -60,11 +60,11 @@ public class GarageTest {
             BikeFactory bikeFactory = new BikeFactory();
 
             garage.choose(bikeFactory);
-            garage.order("bajaj");
+            garage.order(BIKE_TYPE.BAJAJ);
             ArrayList<Vehicle> vehicles = garage.getVehicles();
             Vehicle bajajBike = vehicles.get(0);
 
-            assertEquals("bajaj", bajajBike.getName());
+            assertEquals(BIKE_TYPE.BAJAJ, bajajBike.getName());
         }
     }
 }

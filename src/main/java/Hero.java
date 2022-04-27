@@ -1,5 +1,5 @@
 public class Hero extends Bike {
-    public Hero(String name) {
+    public Hero(VehicleType name) {
         super(name);
     }
 }

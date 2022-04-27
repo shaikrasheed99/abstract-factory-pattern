@@ -1,3 +1,3 @@
 public interface AbstractVehicleFactory {
-    Vehicle create(String vehicleType);
+    Vehicle create(VehicleType vehicleType);
 }

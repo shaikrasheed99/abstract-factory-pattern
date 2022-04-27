@@ -1,5 +1,5 @@
 public class Tata extends Car {
-    public Tata(String name) {
+    public Tata(VehicleType name) {
         super(name);
     }
 }

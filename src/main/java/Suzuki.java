@@ -1,5 +1,5 @@
 public class Suzuki extends Car {
-    public Suzuki(String name) {
+    public Suzuki(VehicleType name) {
         super(name);
     }
 }

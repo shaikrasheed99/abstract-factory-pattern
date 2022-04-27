@@ -12,7 +12,7 @@ public class Garage {
         this.vehicleFactory = vehicleFactory;
     }
 
-    public void order(String vehicleType) {
+    public void order(VehicleType vehicleType) {
         Vehicle vehicle = vehicleFactory.create(vehicleType);
         vehicles.add(vehicle);
     }

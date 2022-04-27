@@ -1,9 +1,9 @@
 public class BikeFactory implements AbstractVehicleFactory {
     @Override
-    public Vehicle create(String vehicleType) {
-        if (vehicleType.equalsIgnoreCase("hero")) {
+    public Vehicle create(VehicleType vehicleType) {
+        if (vehicleType == BIKE_TYPE.HERO) {
             return new Hero(vehicleType);
-        } else if (vehicleType.equalsIgnoreCase("bajaj")) {
+        } else if (vehicleType == BIKE_TYPE.BAJAJ) {
             return new Bajaj(vehicleType);
         }
         return null;

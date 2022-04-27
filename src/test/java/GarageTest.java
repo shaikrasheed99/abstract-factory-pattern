@@ -24,7 +24,7 @@ public class GarageTest {
 
         @Test
         void shouldBeAbleToPlaceTataCarInsideGarage() {
-            garage.order(CAR_TYPE.TATA);
+            garage.orderVehicleWithType(CAR_TYPE.TATA);
             ArrayList<Vehicle> vehicles = garage.getVehicles();
             Vehicle tataCar = vehicles.get(0);
 
@@ -33,7 +33,7 @@ public class GarageTest {
 
         @Test
         void shouldBeAbleToPlaceSuzukiCarInsideGarage() {
-            garage.order(CAR_TYPE.SUZUKI);
+            garage.orderVehicleWithType(CAR_TYPE.SUZUKI);
             ArrayList<Vehicle> vehicles = garage.getVehicles();
             Vehicle suzukiCar = vehicles.get(0);
 
@@ -51,7 +51,7 @@ public class GarageTest {
 
         @Test
         void shouldBeAbleToPlaceHeroBikeInsideGarage() {
-            garage.order(BIKE_TYPE.HERO);
+            garage.orderVehicleWithType(BIKE_TYPE.HERO);
             ArrayList<Vehicle> vehicles = garage.getVehicles();
             Vehicle heroBike = vehicles.get(0);
 
@@ -60,7 +60,7 @@ public class GarageTest {
 
         @Test
         void shouldBeAbleToPlaceBajajBikeInsideGarage() {
-            garage.order(BIKE_TYPE.BAJAJ);
+            garage.orderVehicleWithType(BIKE_TYPE.BAJAJ);
             ArrayList<Vehicle> vehicles = garage.getVehicles();
             Vehicle bajajBike = vehicles.get(0);
 

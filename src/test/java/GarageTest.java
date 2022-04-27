@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -13,51 +14,57 @@ public class GarageTest {
         garage = new Garage();
     }
 
-    @Test
-    void shouldBeAbleToPlaceHeroBikeInsideGarage() {
-        BikeFactory bikeFactory = new BikeFactory();
+    @Nested
+    class CarsInGarageTest {
+        @Test
+        void shouldBeAbleToPlaceTataCarInsideGarage() {
+            CarFactory carFactory = new CarFactory();
 
-        garage.choose(bikeFactory);
-        garage.order("hero");
-        ArrayList<Vehicle> vehicles = garage.getVehicles();
-        Vehicle heroBike = vehicles.get(0);
+            garage.choose(carFactory);
+            garage.order("tata");
+            ArrayList<Vehicle> vehicles = garage.getVehicles();
+            Vehicle tataCar = vehicles.get(0);
 
-        assertEquals("hero", heroBike.getName());
+            assertEquals("tata", tataCar.getName());
+        }
+
+        @Test
+        void shouldBeAbleToPlaceSuzukiCarInsideGarage() {
+            CarFactory carFactory = new CarFactory();
+
+            garage.choose(carFactory);
+            garage.order("suzuki");
+            ArrayList<Vehicle> vehicles = garage.getVehicles();
+            Vehicle suzukiCar = vehicles.get(0);
+
+            assertEquals("suzuki", suzukiCar.getName());
+        }
     }
 
-    @Test
-    void shouldBeAbleToPlaceBajajBikeInsideGarage() {
-        BikeFactory bikeFactory = new BikeFactory();
+    @Nested
+    class BikesInGarageTest {
+        @Test
+        void shouldBeAbleToPlaceHeroBikeInsideGarage() {
+            BikeFactory bikeFactory = new BikeFactory();
 
-        garage.choose(bikeFactory);
-        garage.order("bajaj");
-        ArrayList<Vehicle> vehicles = garage.getVehicles();
-        Vehicle bajajBike = vehicles.get(0);
+            garage.choose(bikeFactory);
+            garage.order("hero");
+            ArrayList<Vehicle> vehicles = garage.getVehicles();
+            Vehicle heroBike = vehicles.get(0);
 
-        assertEquals("bajaj", bajajBike.getName());
-    }
+            assertEquals("hero", heroBike.getName());
+        }
 
-    @Test
-    void shouldBeAbleToPlaceTataCarInsideGarage() {
-        CarFactory carFactory = new CarFactory();
+        @Test
+        void shouldBeAbleToPlaceBajajBikeInsideGarage() {
+            BikeFactory bikeFactory = new BikeFactory();
 
-        garage.choose(carFactory);
-        garage.order("tata");
-        ArrayList<Vehicle> vehicles = garage.getVehicles();
-        Vehicle tataCar = vehicles.get(0);
+            garage.choose(bikeFactory);
+            garage.order("bajaj");
+            ArrayList<Vehicle> vehicles = garage.getVehicles();
+            Vehicle bajajBike = vehicles.get(0);
 
-        assertEquals("tata", tataCar.getName());
-    }
-
-    @Test
-    void shouldBeAbleToPlaceSuzukiCarInsideGarage() {
-        CarFactory carFactory = new CarFactory();
-
-        garage.choose(carFactory);
-        garage.order("suzuki");
-        ArrayList<Vehicle> vehicles = garage.getVehicles();
-        Vehicle suzukiCar = vehicles.get(0);
-
-        assertEquals("suzuki", suzukiCar.getName());
+            assertEquals("bajaj", bajajBike.getName());
+        }
     }
 }

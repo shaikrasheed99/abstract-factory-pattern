@@ -17,4 +17,11 @@ public class BikeFactoryTest {
 
         assertTrue(hero instanceof Hero);
     }
+
+    @Test
+    void shouldBeAbleToCreateBajajBike() {
+        Vehicle bajaj = bikeFactory.createVehicleWithType(BIKE_TYPE.BAJAJ);
+
+        assertTrue(bajaj instanceof Bajaj);
+    }
 }

@@ -16,6 +16,12 @@ public class GarageTest {
 
     @Nested
     class CarsInGarageTest {
+        @BeforeEach
+        void setUpCarFactory() {
+            CarFactory carFactory = new CarFactory();
+            garage.choose(carFactory);
+        }
+
         @Test
         void shouldBeAbleToPlaceTataCarInsideGarage() {
             CarFactory carFactory = new CarFactory();
@@ -43,6 +49,12 @@ public class GarageTest {
 
     @Nested
     class BikesInGarageTest {
+        @BeforeEach
+        void setUpBikeFactory() {
+            BikeFactory bikeFactory = new BikeFactory();
+            garage.choose(bikeFactory);
+        }
+
         @Test
         void shouldBeAbleToPlaceHeroBikeInsideGarage() {
             BikeFactory bikeFactory = new BikeFactory();

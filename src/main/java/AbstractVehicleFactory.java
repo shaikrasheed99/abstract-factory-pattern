@@ -1,3 +1,3 @@
 public interface AbstractVehicleFactory {
-    Vehicle create(VehicleType vehicleType);
+    Vehicle createVehicleWithType(VehicleType vehicleType);
 }

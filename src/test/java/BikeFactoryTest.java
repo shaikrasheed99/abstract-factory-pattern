@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class BikeFactoryTest {
@@ -23,5 +24,10 @@ public class BikeFactoryTest {
         Vehicle bajaj = bikeFactory.createVehicleWithType(BIKE_TYPE.BAJAJ);
 
         assertTrue(bajaj instanceof Bajaj);
+    }
+
+    @Test
+    void shouldNotBeAbleToCreateAnyBikeWithNoInputs() {
+        assertNull(bikeFactory.createVehicleWithType(null));
     }
 }

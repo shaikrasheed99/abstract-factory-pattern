@@ -1,5 +1,5 @@
 public class Suzuki extends Car {
-    public Suzuki(VehicleType name) {
-        super(name);
+    public Suzuki(VehicleType type) {
+        super(type);
     }
 }

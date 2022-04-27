@@ -1,5 +1,5 @@
 public class Bajaj extends Bike {
-    public Bajaj(VehicleType name) {
-        super(name);
+    public Bajaj(VehicleType type) {
+        super(type);
     }
 }

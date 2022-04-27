@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class GarageTest {
     private Garage garage;
@@ -28,7 +28,7 @@ public class GarageTest {
             ArrayList<Vehicle> vehicles = garage.getVehicles();
             Vehicle tataCar = vehicles.get(0);
 
-            assertEquals(CAR_TYPE.TATA, tataCar.getName());
+            assertTrue(tataCar instanceof Tata);
         }
 
         @Test
@@ -37,7 +37,7 @@ public class GarageTest {
             ArrayList<Vehicle> vehicles = garage.getVehicles();
             Vehicle suzukiCar = vehicles.get(0);
 
-            assertEquals(CAR_TYPE.SUZUKI, suzukiCar.getName());
+            assertTrue(suzukiCar instanceof Suzuki);
         }
     }
 
@@ -55,7 +55,7 @@ public class GarageTest {
             ArrayList<Vehicle> vehicles = garage.getVehicles();
             Vehicle heroBike = vehicles.get(0);
 
-            assertEquals(BIKE_TYPE.HERO, heroBike.getName());
+            assertTrue(heroBike instanceof Bike);
         }
 
         @Test
@@ -64,7 +64,7 @@ public class GarageTest {
             ArrayList<Vehicle> vehicles = garage.getVehicles();
             Vehicle bajajBike = vehicles.get(0);
 
-            assertEquals(BIKE_TYPE.BAJAJ, bajajBike.getName());
+            assertTrue(bajajBike instanceof Bajaj);
         }
     }
 }

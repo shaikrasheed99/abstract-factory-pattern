@@ -1,12 +1,7 @@
 public class Car implements Vehicle {
-    private final VehicleType name;
+    private final VehicleType type;
 
-    public Car(VehicleType name) {
-        this.name = name;
-    }
-
-    @Override
-    public VehicleType getName() {
-        return name;
+    public Car(VehicleType type) {
+        this.type = type;
     }
 }

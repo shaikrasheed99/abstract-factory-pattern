@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class CarFactoryTest {
@@ -19,5 +20,12 @@ public class CarFactoryTest {
         Vehicle suzuki = carFactory.createVehicleWithType(CAR_TYPE.SUZUKI);
 
         assertTrue(suzuki instanceof Suzuki);
+    }
+
+    @Test
+    void shouldNotBeAbleToCreateAnyVehicleWithNoInput() {
+        CarFactory carFactory = new CarFactory();
+
+        assertNull(carFactory.createVehicleWithType(null));
     }
 }

@@ -11,4 +11,13 @@ public class CarFactoryTest {
 
         assertTrue(tata instanceof Tata);
     }
+
+    @Test
+    void shouldBeAbleToCreateSUZUKICar() {
+        CarFactory carFactory = new CarFactory();
+
+        Vehicle suzuki = carFactory.createVehicleWithType(CAR_TYPE.SUZUKI);
+
+        assertTrue(suzuki instanceof Suzuki);
+    }
 }
